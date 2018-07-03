@@ -1,0 +1,83 @@
+/*----------------------------------
+  utilities
+----------------------------------*/
+%img-fluid {
+  max-width: 100%;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+%box-shadow {
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+}
+
+%xy-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%card {
+  box-shadow: 2px 4px 12px transparentize(black, .8);
+  transition: box-shadow .4s ease-in-out;
+  &:hover {
+    box-shadow: 4px 8px 25px transparentize(black, .7);
+
+  }
+
+}
+
+/*----------------------------------
+  pre written
+----------------------------------*/
+html, body, * {
+  box-sizing: border-box;
+}
+
+body, td, th, p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+  color: #333;
+  line-height: 1.5;
+}
+
+body {
+  background-color: #fdfdfd;
+  margin: 0;
+  position: relative;
+}
+
+ul, li {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+  color: #333;
+}
+
+a {
+  color: $mainColor;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: #3397db;
+  text-decoration: none;
+}
+
+a img {
+  border: none 0px #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 0 20px;
+}
+
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
