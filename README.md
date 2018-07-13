@@ -1,4 +1,4 @@
-#resturant reviews udacity project
+# restaurant reviews udacity project
    Three Stage Course Material Project - Restaurant Reviews
 ## project overview
 
@@ -6,7 +6,7 @@ showing neighborhood restaurants on a map and the user can click map marker
  
 for more details the site is accessible and responsive and offline first
     
-##table of content
+## table of content
 * [getting started](#2-start)
 * [recourse](#3-resourses)
 
