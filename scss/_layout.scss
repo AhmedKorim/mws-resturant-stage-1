@@ -156,6 +156,13 @@
     min-height: 380px;
     text-align: left;
     width: 270px;
+    @media(max-width: 630px) {
+      width: 90%;
+    }
+    @media (min-width: 631px) and (max-width: 700px) {
+      width: 240px;
+    }
+
     .restaurant-img {
       background-color: #ccc;
       display: block;
