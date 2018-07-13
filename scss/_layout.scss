@@ -170,7 +170,7 @@
     }
 
     .restaurant-name {
-      color: $secColor;
+      color: darken($mainColor, 20%);
       font-family: Arial, sans-serif;
       font-size: 14pt;
       font-weight: 200;
@@ -292,7 +292,10 @@
     border-bottom: 1px solid #d9d9d9;
     border-top: 1px solid #fff;
     padding: 30px 40px 80px;
+    @media(max-width: 600px) {
+      padding: 30px 15px 80px;
 
+    }
     h2 {
       color: $secColor;
       font-size: 24pt;
@@ -327,11 +330,16 @@
   footer
 ----------------------------------*/
 .main-footer {
-  background-color: #444;
+  background-color: hsl(0, 2%, 9%);
   color: #aaa;
   font-size: 8pt;
   letter-spacing: 1px;
   padding: 25px;
   text-align: center;
   text-transform: uppercase;
+}
+
+*:focus {
+  outline: 3px solid lighten($mainColor, 40) !important;
+  box-shadow: 2px 2px 30px transparentize(black, .5) !important;
 }

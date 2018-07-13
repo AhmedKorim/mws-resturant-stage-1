@@ -44,11 +44,11 @@ ul, li {
   color: #333; }
 
 a {
-  color: #3398db;
+  color: #0d83f2;
   text-decoration: none; }
 
 a:hover, a:focus {
-  color: #3397db;
+  color: #3d9cf5;
   text-decoration: none; }
 
 a img {
@@ -60,6 +60,11 @@ h1, h2, h3, h4, h5, h6 {
 
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
   display: block; }
+
+.SR-only {
+  visibility: hidden;
+  width: 1px;
+  height: 1px; }
 
 /* CSS Document */
 #maincontent {
@@ -97,7 +102,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
     z-index: 23;
     width: 100%;
     height: 80px;
-    background-color: #3398db;
+    background-color: #084f91;
     box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
     text-align: center;
     position: relative;
@@ -125,11 +130,11 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
       color: black;
       content: "/\00a0"; }
     #breadcrumb li a {
-      color: #3398db;
+      color: #084f91;
       transition: all .5s ease-in-out;
       text-decoration: none; }
       #breadcrumb li a:hover {
-        color: #19608f; }
+        color: #0d83f2; }
 
 /* Display list items side by side */
 /* Add a slash symbol (/) before/behind each list item */
@@ -144,7 +149,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 /* ====================== Restaurant Filtering ====================== */
 .filter-options {
   width: 100%;
-  background-color: #3398db;
+  background-color: #084f91;
   flex-wrap: wrap;
   padding: 1rem; }
   .filter-options h2 {
@@ -190,7 +195,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
       width: 100%;
       padding: 0 30px 25px; }
     #restaurants-list li .restaurant-name {
-      color: #19608f;
+      color: #031a30;
       font-family: Arial, sans-serif;
       font-size: 14pt;
       font-weight: 200;
@@ -199,7 +204,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
       margin: 20px 0 10px;
       text-transform: capitalize; }
     #restaurants-list li .restaurant-action {
-      background-color: #3398db;
+      background-color: #084f91;
       color: #fff;
       display: block;
       font-size: 10pt;
@@ -210,11 +215,11 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
       text-transform: uppercase;
       transition: all .3s ease-in-out; }
       #restaurants-list li .restaurant-action:hover {
-        background-color: #19608f; }
+        background-color: #0d83f2; }
   #restaurants-list p {
     margin: 0;
     font-size: 11pt;
-    color: #878787; }
+    color: #545454; }
 
 /* ====================== Restaurant Details ====================== */
 .inside header {
@@ -239,7 +244,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   width: 100%; }
 
 #restaurant-name {
-  color: #19608f;
+  color: #0d83f2;
   font-family: Arial, sans-serif;
   font-size: 20pt;
   font-weight: 200;
@@ -257,7 +262,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
       width: 85%;
       margin: auto; }
       .restaurant-content-wrapper #restaurant-container .restaurant-data #restaurant-cuisine {
-        background-color: #3398db;
+        background-color: #084f91;
         color: white;
         font-size: 12pt;
         font-weight: 300;
@@ -273,14 +278,17 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
         font-size: 12pt;
         margin: 10px 0px; }
       .restaurant-content-wrapper #restaurant-container .restaurant-data #restaurant-hours td {
-        color: #878787;
+        color: #545454;
         padding: .3rem 1rem; }
   .restaurant-content-wrapper #reviews-container {
     border-bottom: 1px solid #d9d9d9;
     border-top: 1px solid #fff;
     padding: 30px 40px 80px; }
+    @media (max-width: 600px) {
+      .restaurant-content-wrapper #reviews-container {
+        padding: 30px 15px 80px; } }
     .restaurant-content-wrapper #reviews-container h2 {
-      color: #19608f;
+      color: #0d83f2;
       font-size: 24pt;
       font-weight: 300;
       letter-spacing: -1px;
@@ -304,12 +312,16 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   footer
 ----------------------------------*/
 .main-footer {
-  background-color: #444;
+  background-color: #171616;
   color: #aaa;
   font-size: 8pt;
   letter-spacing: 1px;
   padding: 25px;
   text-align: center;
   text-transform: uppercase; }
+
+*:focus {
+  outline: 3px solid #6eb5f7 !important;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.5) !important; }
 
 /*# sourceMappingURL=styles.css.map */
