@@ -1,8 +1,10 @@
 let restaurant;
 var map;
 const mapWrapper = document.querySelector('#map-container');
+const footer = document.querySelector('.main-footer');
+
 const maxScroll = () => {
-    return +window.getComputedStyle(document.body).height.slice(0, -2) -120
+    return +window.getComputedStyle(document.body).height.slice(0, -2) - window.innerHeight ;
 };
 let currentMaxScroll = [maxScroll()];
 
@@ -170,20 +172,32 @@ getParameterByName = (name, url) => {
 window.addEventListener('scroll', mapAdjustion);
 window.addEventListener('resize', function () {
     currentMaxScroll = [maxScroll()];
-    mapWrapper.style.height = window.innerHeight - 200 + 'px';
+    mapSize();
+
 })
 // initial dom
 document.querySelector('img').addEventListener('load', function () {
     currentMaxScroll = [maxScroll()];
-    mapWrapper.style.height = window.innerHeight - 200 + 'px';
+    mapSize();
 
 });
 
+function mapSize() {
+    mapWrapper.style.height = window.innerHeight - (
+        document.querySelector('nav').clientHeight +
+        document.querySelector('#breadcrumb').clientHeight +
+        footer.clientHeight) + 'px';
+}
+
 function mapAdjustion() {
-    if (window.innerWidth >= 950 && window.scrollY < currentMaxScroll[0]) {
-        mapWrapper.style.transform = ` translate3d(0,${window.scrollY}px,0)`;
-        console.log('sync', currentMaxScroll[0]);
-    }else{
+    if (window.innerWidth >= 950) {
+        if (window.scrollY + footer.clientHeight < currentMaxScroll[0]) {
+            mapWrapper.style.transform = ` translate3d(0,${window.scrollY}px,0)`;
+        } else {
+            mapWrapper.style.transform = ` translate3d(0,${window.scrollY - footer.clientHeight}px,0)`;
+
+        }
+    } else {
         mapWrapper.style.transform = ` translate3d(0,0px,0)`;
     }
 }
