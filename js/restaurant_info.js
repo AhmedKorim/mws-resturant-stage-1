@@ -102,7 +102,7 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
  */
 fillReviewsHTML = (reviews = self.restaurant.reviews) => {
     const container = document.getElementById('reviews-container');
-    const title = document.createElement('h2');
+    const title = document.createElement('h3');
     title.innerHTML = 'Reviews';
     container.appendChild(title);
 
@@ -175,20 +175,20 @@ window.addEventListener('resize', function () {
     mapSize();
 
 })
-// initial dom
+// initial dom after restaurant image loading
 document.querySelector('img').addEventListener('load', function () {
     currentMaxScroll = [maxScroll()];
     mapSize();
 
 });
-
+// map size
 function mapSize() {
     mapWrapper.style.height = window.innerHeight - (
         document.querySelector('nav').clientHeight +
         document.querySelector('#breadcrumb').clientHeight +
         footer.clientHeight) + 'px';
 }
-
+// map location on user scroll
 function mapAdjustion() {
     if (window.innerWidth >= 950) {
         if (window.scrollY + footer.clientHeight < currentMaxScroll[0]) {
