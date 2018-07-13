@@ -4,7 +4,7 @@ const mapWrapper = document.querySelector('#map-container');
 const footer = document.querySelector('.main-footer');
 
 const maxScroll = () => {
-    return +window.getComputedStyle(document.body).height.slice(0, -2) - window.innerHeight ;
+    return +window.getComputedStyle(document.body).height.slice(0, -2) - window.innerHeight;
 };
 let currentMaxScroll = [maxScroll()];
 
@@ -63,9 +63,10 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
     address.innerHTML = restaurant.address;
 
     const image = document.getElementById('restaurant-img');
-    image.className = 'restaurant-img'
-    image.src = DBHelper.imageUrlForRestaurant(restaurant);
+    image.className = 'restaurant-img';
 
+    image.alt = restaurant.name;
+    image.src = DBHelper.imageUrlForRestaurant(restaurant);
     const cuisine = document.getElementById('restaurant-cuisine');
     cuisine.innerHTML = restaurant.cuisine_type;
 
@@ -181,6 +182,7 @@ document.querySelector('img').addEventListener('load', function () {
     mapSize();
 
 });
+
 // map size
 function mapSize() {
     mapWrapper.style.height = window.innerHeight - (
@@ -188,6 +190,7 @@ function mapSize() {
         document.querySelector('#breadcrumb').clientHeight +
         footer.clientHeight) + 'px';
 }
+
 // map location on user scroll
 function mapAdjustion() {
     if (window.innerWidth >= 950) {
